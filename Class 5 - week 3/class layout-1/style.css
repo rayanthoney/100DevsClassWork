@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+header,
+footer {
+  width: 100%;
+  height: 33%;
+  background-color: green;
+}
+
+section {
+  width: 33%;
+  height: 33%;
+}
+
+section {
+  background-color: blue;
+}
+
+section + section {
+  background-color: red;
+}
+section + section + section {
+  background-color: black;
+}
+
+.left {
+  float: left;
+}
+.center {
+  float: left;
+}
+.right {
+  float: left;
+}
+
+footer {
+  clear: left;
+}
+
+/* you don't need clear fix */
+/* .clearfix {
+  overflow: auto;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+} */

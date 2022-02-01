@@ -1,0 +1,47 @@
+/* Please Make only Rhino and Zebra Blue */
+.fourLegs {
+  color: blue;
+}
+/* Please Make only Hufflepuff Gold */
+.harryPotter {
+  color: gold;
+}
+/* Please select Duck with the highest level of specificity possible */
+.areDucksDinosaurs .likesToQuack {
+  color: gray !important;
+}
+
+body
+  section.top
+  + section.middle
+  + article.areDucksDinosaurs
+  h2.likesToQuack.fight1Or100 {
+  color: red !important;
+}
+
+body
+  h1#hi
+  + section.top
+  + section.middle
+  + article.areDucksDinosaurs
+  h2.likesToQuack.fight1Or100 {
+  color: blue !important;
+}
+
+html
+  > head
+  + body
+  h1#hi
+  + section.top
+  + section.middle
+  + article.areDucksDinosaurs
+  h2.likesToQuack.fight1Or100 {
+  color: yellow !important;
+}
+
+/* for HW do crazy specificity */
+/* Please select Rhino with the highest level of specificity possible */
+body section.top h2#rhino {
+  color: lavender !important;
+  box-sizing: border-box;
+}

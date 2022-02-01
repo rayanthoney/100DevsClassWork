@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 2px solid black;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+header,
+section,
+article,
+footer {
+  height: 25%;
+  line-height: 25vh;
+  text-align: center;
+}
+
+.left-art {
+  clear: both;
+  width: 33.33%;
+  float: left;
+}
+.right-art {
+  width: 66.66%;
+  float: right;
+}
+
+.bottom {
+  clear: both;
+}

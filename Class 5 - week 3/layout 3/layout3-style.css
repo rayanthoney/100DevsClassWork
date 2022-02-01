@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 2px solid black;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+header,
+footer {
+  height: 25%;
+  line-height: 25vh;
+}
+
+section {
+  height: 50%;
+  line-height: 50vh;
+}
+
+header,
+section,
+article,
+footer {
+  text-align: center;
+}
+
+section {
+  width: 20%;
+  float: left;
+}
+
+.fat-section {
+  width: 40%;
+}
+
+footer {
+  clear: both;
+}

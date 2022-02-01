@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #000;
+}
+
+header a {
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.8125rem;
+  line-height: 1.875rem;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 3.75rem;
+  border-left: 1px #888 solid;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sign-in {
+  width: 9.375rem;
+}
+
+.search {
+  width: 15.625rem;
+  height: 100%;
+}
+
+.search form {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search label {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.search input {
+  align-self: center;
+  width: 80%;
+  height: 65%;
+}
+
+/* main section */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75rem;
+}
+
+.welcome {
+  margin-top: 20px;
+  width: 80%;
+  height: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+}
