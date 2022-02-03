@@ -19,6 +19,7 @@ footer {
   height: 25%;
   line-height: 25vh;
   text-align: center;
+  transition: all 3s;
 }
 
 .left-section {
@@ -46,4 +47,48 @@ footer {
 
 .bottom {
   clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  header,
+  footer {
+    background-color: blue;
+  }
+
+  section {
+    background-color: yellow;
+  }
+
+  article {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  header,
+  footer {
+    height: 35%;
+  }
+
+  section {
+    height: 15%;
+  }
+
+  article {
+    height: 15%;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  footer {
+    background-color: green;
+    color: #fff;
+    transform: translateY(-75vh);
+  }
+
+  header {
+    background-color: blue;
+    color: #fff;
+    transform: translateY(75vh);
+  }
 }
