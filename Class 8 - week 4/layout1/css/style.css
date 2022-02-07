@@ -1,42 +1,231 @@
 /* Box Model Hack */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-primary);
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
+*:root {
+  /* I don't have Helvetica, think its owned by adobe*/
+  --ff-primary: 'Roboto', Helvetica, Arial, sans-serif;
 
-body {
+  --clr-bg-primary: #fff;
+  --clr-border: #ddd;
 
+  --clr-font-primary: #000;
+  --clr-font-secondary: #777;
+  --clr-font-tertiary: #333;
+
+  --clr-brand: rgb(253, 192, 6);
+  /* on site its id="tc-gradient" */
+  --clr-brand-logo: linear-gradient(#00d301, #36c275 50%, #00a562);
 }
 
+/* colors/font */
+
+h1,
+h2,
+h3 {
+  color: var(--clr-font-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 100%;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+p {
+  color: var(--clr-font-secondary);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.story-container p {
+  color: var(--clr-font-tertiary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.author-name a {
+  text-decoration: none;
+  color: var(--clr-font-tertiary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
-}
-
-footer {
-
-}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+/******************************************
+/* header
+/*******************************************/
+
+header {
+  float: left;
+  width: 18%;
+  padding-left: 1.25rem;
+}
+
+.logo {
+  margin-top: 1.875rem;
+  width: 72px;
+  height: 36px;
+}
+
+header > a {
+  display: block;
+  text-decoration: none;
+  margin: 0.9375rem 0;
+}
+
+.extra-crunch {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--clr-brand);
+}
+
+.login {
+  font-size: 18px;
+  color: var(--clr-font-secondary);
+}
+
+header nav {
+  margin-top: 2.8125rem;
+}
+
+li {
+  list-style: none;
+  margin: 0.9375rem 0;
+}
+
+li > a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--clr-font-secondary);
+  opacity: 0.9;
+}
+
+li > a:hover {
+  color: var(--clr-brand);
+}
+
+/* phat line above more */
+nav li:last-of-type {
+  position: relative;
+  margin-top: 3.75rem;
+}
+
+nav li:last-of-type::before {
+  content: '';
+  position: absolute;
+  top: -1.875rem;
+  width: 1.5625rem;
+  border-top: 2px solid rgba(119, 119, 119, 0.6);
+  padding-top: 0.9375rem;
+}
+
+/* controls search pop-up */
+.search-before {
+  /* default */
+}
+
+.search-icon {
+  width: 0.9375rem;
+}
+
+.search-form {
+  display: none;
+}
+
+.search-before:hover + .search-form {
+  display: unset;
+}
+
+/******************************************
+/* main
+/*******************************************/
+
+main {
+  margin-top: 1.875rem;
+  float: left;
+  width: 82%;
+}
+
+.main-story {
+  padding-right: 5%;
+  float: left;
+  width: 70%;
+}
+
+h1 {
+  margin: 0.625rem 0;
+}
+
+.main-story img {
+  display: block;
+  width: 100%;
+}
+
+.main-story .author-name {
+  margin-bottom: 0.1875rem;
+}
+
+/******************************************
+/* section of articles
+/*******************************************/
+
+.story-container {
+  float: left;
+  width: 30%;
+}
+
+.story-container article {
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.story-container article:last-of-type {
+  border-bottom: unset;
+}
+
+.story-container article + article {
+  margin-top: 1.25rem;
+}
+
+article h2 {
+  margin-bottom: 0.5rem;
+}

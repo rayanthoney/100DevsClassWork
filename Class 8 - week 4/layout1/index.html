@@ -8,6 +8,14 @@
 
     <title>Blank Template</title>
 
+    <!--  google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -15,20 +23,31 @@
   </head>
   <body>
     <header>
-      <span>LOGO SVG</span>
-      <a href="#">Join Extra Crunch</a>
-      <a href="#">Login</a>
+      <img src="./assets/brand-logo.svg" alt="Tech-Crunch logo" class="logo" />
+      <a href="#" class="extra-crunch">Join Extra Crunch</a>
+      <a href="#" class="login">Login</a>
       <nav>
         <ul>
-          <li>
+          <li class="search-before">
+            <a href="#">
+              Search
+              <span>
+                <img
+                  src="./assets/search.svg"
+                  alt="search icon"
+                  class="search-icon"
+                />
+              </span>
+            </a>
+          </li>
+          <li class="search-form">
             <form>
               <!-- search opens popup that lets you search -->
-              <label for="search">Login</label>
+              <label for="search">Search</label>
               <input type="text" name="search" id="search" />
             </form>
           </li>
           <li><a href="#">Startups</a></li>
-          <li><a href="#">Videos</a></li>
           <li><a href="#">Videos</a></li>
           <li><a href="#">Audio</a></li>
           <li><a href="#">Newsletters</a></li>
@@ -36,8 +55,7 @@
           <li><a href="#">The TC List</a></li>
           <li><a href="#">Advertise</a></li>
           <li><a href="#">Events</a></li>
-          <li><span>PHAT BAR</span></li>
-          <li><button>More</button></li>
+          <li><a href="#">More</a></li>
         </ul>
       </nav>
     </header>
@@ -45,42 +63,42 @@
     <main>
       <section class="main-story">
         <!-- for now span, need to think about semantic need to add the logo -->
-        <span>Extra Crunch</span>
+        <span class="extra-crunch">Extra Crunch</span>
         <h1>What China's fintech market can teach the world</h1>
         <p>
           Finance researcher Martin Chorzempa discusses Ant Group, payments
           networks and more
         </p>
-        <span><a href="#">Danny Crichton</a></span>
+        <p class="author-name"><a href="#">Danny Crichton</a></p>
         <img
           src="./assets/china.jpg"
           alt="women looking at food ordering terminal displaying checkout cart. A camera is used on the terminal for facial detection and detecting what food the women ordered."
         />
       </section>
-      <section>
+      <section class="story-container">
         <article>
           <h2>
             SellerX raises &dollar;118M to buy up and grow Amazon marketplace
             businesses
           </h2>
-          <p>someone name</p>
+          <p class="author-name"><a href="#">someone name</a></p>
         </article>
         <article>
           <h2>
             Spotify open a market place for Canvas looping artwork designers
           </h2>
-          <p>someone name</p>
+          <p class="author-name"><a href="#">someone name</a></p>
         </article>
         <article>
           <h2>Instagram revamps its mobile messaging app Threads</h2>
-          <p>someone name</p>
+          <p class="author-name"><a href="#">someone name</a></p>
         </article>
         <article>
           <h2>
             ZenBusiness snags &dollar;55M Series B for its incorporation and
             growth platform for micro businesses
           </h2>
-          <p>someone name</p>
+          <p class="author-name"><a href="#">someone name</a></p>
         </article>
       </section>
     </main>

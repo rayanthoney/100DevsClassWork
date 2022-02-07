@@ -1,0 +1,33 @@
+      <svg width="90" height="45" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- gradientTransform="rotate(45)" -->
+          <linearGradient id="brand-logo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00a562" />
+            <stop offset="50%" stop-color="#36c275" />
+            <stop offset="100%" stop-color="#00d301" />
+          </linearGradient>
+        </defs>
+
+        <path
+          fill="url(#brand-logo)"
+          d="M 0,0
+              h 45
+              v 15
+              h -15
+              v 30
+              h -15
+              v -30
+              h -15
+              M 60, 0
+              h 30
+              v 15
+              h -30
+              M 45, 15
+              h 15
+              v 15
+              h 30
+              v 15
+              h -45
+              z"
+        />
+      </svg>
