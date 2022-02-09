@@ -1,42 +1,56 @@
 /* Box Model Hack */
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
+*:root {
+  --clr-bg-primary: #fff;
+  --clr-bg-secondary: #000;
+  --clr-bg-accent: #636363;
 
-body {
-
+  --clr-font-primary: #fff;
+  --clr-font-secondary: #767676;
 }
-
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
-}
-
-footer {
-
-}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+/******************************************
+/* header
+/*******************************************/
+
+header {
+  height: 3.125rem;
+}
+
+nav li {
+  height: 3.125rem;
+  list-style: none;
+  display: inline-block;
+}
