@@ -8,20 +8,27 @@
 
     <title>BBC - Homepage</title>
 
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script defer type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <header>
+    <header class="top-header">
       <nav>
         <ul>
-          <li>
+          <li class="logo">
             <a href="#"><img src="./asset/bbc.svg" alt="bbc logo" /></a>
           </li>
-          <li>
-            <span><img src="./asset/person.svg" alt="" /></span>
+          <li class="sign-in">
             <a href="#">Sign in</a>
           </li>
           <li><a href="#">Home</a></li>
@@ -32,12 +39,21 @@
           <li><a href="#">Travel</a></li>
           <li><a href="#">Future</a></li>
           <li><a href="#">Culture</a></li>
-          <li><a href="#">More</a></li>
-          <li>
+          <li class="nav-more-btn">
+            <a href="#">More</a>
+          </li>
+          <li class="nav-search">
             <form>
               <label for="serach">Search</label>
-              <input type="text" name="search" id="search" />
-              <span><img src="./asset/search.svg" alt="" /></span>
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search"
+              />
+              <span class="search-icon">
+                <img src="./asset/search.svg" alt="" />
+              </span>
             </form>
           </li>
         </ul>
@@ -48,64 +64,78 @@
         <h1>Welcome to BBC.com</h1>
         <time datetime="2020-08-13">Thursday, 13 August</time>
       </header>
-      <section class="main-article-container">
+      <section class="main-article-container clearfix">
         <!-- main story -->
         <article class="main-article">
-          <h2>Israel and UAE strike historic peace deal</h2>
-          <p>
-            Israel and the UAE agree to normalize relations, making the third
-            Israel-Arab peace deal.
-          </p>
-          <p><a href="#">Middle East</a></p>
+          <div>
+            <h2>Israel and UAE strike historic peace deal</h2>
+            <p>
+              Israel and the UAE agree to normalize relations, making the third
+              Israel-Arab peace deal.
+            </p>
+            <p class="article-category decor-line">
+              <a href="#">Middle East</a>
+            </p>
+          </div>
         </article>
         <!-- section of sub stories -->
         <section class="sub-articles-container">
-          <article>
-            <h3>Americans, go home: Tension at Canada-US border</h3>
-            <p class="article-category"><a href="#">Canada</a></p>
+          <article class="canada-story">
+            <div>
+              <h3>Americans, go home: Tension at Canada-US border</h3>
+              <p class="article-category decor-line"><a href="#">Canada</a></p>
+            </div>
           </article>
-          <article>
-            <h3>How will the world vaccinate seven billion people?</h3>
-            <p class="article-category"><a href="#">Health</a></p>
+          <article class="health-story">
+            <div>
+              <h3>How will the world vaccinate seven billion people?</h3>
+              <p class="article-category decor-line"><a href="#">Health</a></p>
+            </div>
           </article>
-          <article>
-            <h3>The online `productivity gyms`</h3>
-            <p class="article-category"><a href="#">Worklife</a></p>
+          <article class="worklife-story">
+            <div>
+              <h3>The online 'productivity gyms`</h3>
+              <p class="article-category decor-line">
+                <a href="#">Worklife</a>
+              </p>
+            </div>
           </article>
-          <article>
-            <h3>The folk singer murdered for his music</h3>
-            <p class="article-category"><a href="#">culture</a></p>
+          <article class="culture-story">
+            <div>
+              <h3>The folk singer murdered for his music</h3>
+              <p class="article-category decor-line"><a href="#">culture</a></p>
+            </div>
           </article>
         </section>
       </section>
 
       <!-- news section -->
-      <section>
-        <h2></h2>
+      <section class="news-section-container">
+        <h2 class="decor-line">News</h2>
         <section>
           <article>
             <img
               src="./asset/biden-img.jpg"
               alt="Biden and Harris shaking hands"
             />
-            <h2>Biden and Harris say Trump has left US `in tatters`</h2>
+            <h2>Biden and Harris say Trump has left US 'in tatters'</h2>
             <p>
               Joe Biden and running mate Kamala Harris call President Donald
               Trump a "whining" incompetent leader.
             </p>
-            <p><a href="">US Election 2020</a></p>
+            <p class="decor-line"><a href="#">US Election 2020</a></p>
           </article>
           <article>
             <img
               src="./asset/peace-img.jpg"
               alt="women protesting for peace in Belarus"
             />
-            <h2>Women form `solidarity chains` in Belarus protests</h2>
+            <h2>Women form 'solidarity chains' in Belarus protests</h2>
             <p>
               Women take to the streets of Minsk dressed in white as they demand
               an end police brutality.
             </p>
-            <p><a href="#">Europe</a></p>
+            <p class="decor-line"><a href="#">Europe</a></p>
           </article>
           <article>
             <img src="./asset/trump-img.jpg" alt="trump with wavy hair" />
@@ -114,7 +144,7 @@
               The US calls for rules to be eased after Donald Trump complained
               of issues washing his hair.
             </p>
-            <p><a href="#">US & Canada</a></p>
+            <p class="decor-line"><a href="#">US & Canada</a></p>
           </article>
         </section>
       </section>
