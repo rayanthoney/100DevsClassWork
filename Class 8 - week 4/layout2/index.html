@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -28,14 +28,22 @@
       <nav>
         <ul>
           <!-- maybe summary -->
-          <li><a href="#">Courses</a></li>
-          <li>
+          <li class="course"><a href="#">Courses</a></li>
+          <li class="search">
             <form action="">
-              <label for="search"></label>
-              <input type="text" id="search" name="search" />
+              <label for="search">Search</label>
+              <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Search"
+              />
+              <span class="search-icon">
+                <img src="./assest/search.svg" alt="" />
+              </span>
             </form>
           </li>
-          <li><a href="#">Khan Academy</a></li>
+          <li class="logo"><a href="#">Khan Academy</a></li>
           <li><a href="#">Donate</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Sign up</a></li>
@@ -43,24 +51,30 @@
       </nav>
     </header>
     <main>
-      <section>
-        <img src="#" alt="" />
+      <section class="top-section">
+        <img src="./assest/header-img.JPG" alt="" />
         <section>
-          <h1>For every student, every classroom. Real results.</h1>
+          <h1>
+            <span>For every student,</span>
+            <br />
+            <span>every classroom.</span>
+            <br />
+            <span>Real results.</span>
+          </h1>
           <p>
             We're a nonprofit with the mission to provide a free, world-class
             education for anyone, anywhere.
           </p>
-          <ul>
+          <ul class="links-container">
             <li><a href="">Learners</a></li>
             <li><a href="">Teachers</a></li>
             <li><a href="">Districts</a></li>
             <li><a href="">Parents</a></li>
           </ul>
         </section>
-        <section>
-          <h2>Why Khan Academy works</h2>
-        </section>
+      </section>
+      <section class="bottom-section">
+        <h2>Why Khan Academy works</h2>
       </section>
     </main>
   </body>
