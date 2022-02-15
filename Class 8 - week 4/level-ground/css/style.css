@@ -32,29 +32,39 @@
 
   --clr-font-primary: #161f2a;
   --clr-font-secondary: #f1f1f1;
-  --clr-font-accent: #3e404e;
+  --clr-font-accent: #3d404e;
   --clr-font-accent-dark: #6c7c90;
   --clr-font-accent-light: #d5dade;
+
+  --clr-font-accent-btn: #d6cb8a;
 
   --clr-bg-primary: #66768a;
   --clr-bg-secondary: #fff;
   --clr-bg-tertiary: #dbdfe2;
   --clr-bg-bottom: #161f2a;
 
+  --clr-bg-btn-success: #4bb543;
+
   --clr-border: #9f9f9f;
 }
 
 /******************************************
-/* LAYOUT
+/* re-used styles
 /*******************************************/
+
+body {
+  max-width: 87.5rem;
+}
 
 /******************************************
 /* header
 /*******************************************/
 
 .top-header {
-  height: 3.125rem;
+  height: 5rem;
   background-color: var(--clr-bg-primary);
+  padding-left: 2.8125rem;
+  padding-top: 1.25rem;
 }
 
 nav,
@@ -63,18 +73,311 @@ nav li {
   height: 100%;
 }
 
+nav {
+  margin: 0 auto;
+  max-width: 81.25rem;
+}
+
 nav li {
+  /* only resets to top */
+  /* vertical-align: top; */
   list-style: none;
   display: inline-block;
 }
 
+nav li:nth-child(2) {
+  margin-left: 0.625rem;
+}
+
 nav a {
+  padding: 0.9375rem 0.625rem;
   /* font-size: 1.25rem; */
   font-weight: 700;
   text-transform: uppercase;
   color: var(--clr-font-secondary);
 }
 
+nav a:hover {
+  color: var(--clr-font-accent-btn);
+}
+
 li a {
   text-decoration: none;
+}
+
+.header-logo {
+  margin: 0 34%;
+}
+
+nav img {
+  vertical-align: middle;
+  width: 3.125rem;
+}
+
+.btn-donate {
+  color: var(--clr-bg-primary);
+  background-color: var(--clr-bg-secondary);
+  border-radius: 0.3125rem;
+  padding: 10px;
+}
+
+.btn-donate:hover {
+  background-color: var(--clr-bg-btn-success);
+  color: var(--clr-bg-secondary);
+}
+
+/******************************************
+/* main > first section
+/*******************************************/
+
+main header {
+  /* padding-top: 3.75rem; */
+  padding: 3.75rem 3.125rem 2.5rem 3.125rem;
+  background-color: var(--clr-bg-primary);
+  color: var(--clr-font-secondary);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+main header p {
+  margin: 0 auto;
+  margin-top: 1.875rem;
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 80ch;
+}
+
+.demo-video {
+  --box-size: 2.1875rem;
+  --play-size: 0.75rem;
+  --spacer-size: 0.625rem;
+  position: relative;
+  font-weight: 200;
+  width: 15ch;
+}
+
+.demo-video::before {
+  position: absolute;
+  content: '';
+  left: calc(-1 * var(--box-size) + var(--spacer-size));
+  top: calc(100% / 2 - (var(--box-size) / 2));
+  width: var(--box-size);
+  height: var(--box-size);
+  border-radius: 50%;
+  border: 2.5008px solid var(--clr-font-secondary);
+}
+
+.demo-video::after {
+  --half-point: calc((var(--box-size) / 2) - (var(--spacer-size) / 2));
+  --half-play-width: calc(var(--play-size) / 2);
+  position: absolute;
+  content: '';
+  top: calc(100% / 2 - (var(--play-size) / 2));
+  /* left: calc((var(--half-point) + var(--half-play-width)) * -1); */
+  left: calc((var(--half-point)) * -1);
+  width: var(--play-size);
+  height: var(--play-size);
+  background-color: var(--clr-font-secondary);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+main header span {
+  display: block;
+  margin-top: 6.25rem;
+  color: var(--clr-font-accent);
+  font-weight: 600;
+  font-style: italic;
+}
+
+/******************************************
+/* main > 2nd section - why
+/*******************************************/
+
+.why-section {
+  margin: 0 auto;
+  color: var(--clr-font-primary);
+}
+
+.std-section {
+  padding: 8.125rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--ff-primary);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.std-section p {
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  width: 55ch;
+}
+
+/******************************************
+/* main > 3rd section - visit
+/*******************************************/
+
+.visit-section {
+  position: relative;
+  padding: 7.5rem 10%;
+  background-color: var(--clr-bg-tertiary);
+  color: var(--clr-font-primary);
+}
+
+.half-section {
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+}
+
+.half-section + .half-section {
+  margin-left: 10%;
+}
+
+.half-section div {
+  margin: 0 auto;
+  width: 80%;
+  height: 220px;
+  background-color: var(--clr-bg-primary);
+  box-shadow: 0.0625rem 0.0625rem 0.625rem 0.0625rem var(--clr-bg-primary);
+}
+
+h3 {
+  margin-top: 2.5rem;
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.half-section p {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.btn {
+  margin-top: 3.125rem;
+  display: inline-block;
+  padding: 1.25rem 3.125rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--clr-font-primary);
+  font-family: var(--ff-primary);
+  font-weight: 500;
+  border: 1px solid var(--clr-font-primary);
+}
+
+.btn:hover {
+  background-color: var(--clr-bg-btn-success);
+  color: var(--clr-font-secondary);
+}
+
+/******************************************
+/* footer
+/*******************************************/
+
+footer {
+  position: relative;
+  padding: 2.5rem 3.125rem;
+  background-color: var(--clr-bg-bottom);
+  color: var(--clr-font-secondary);
+}
+.left-footer-section {
+  display: inline-block;
+  position: relative;
+  left: 0;
+}
+
+.right-footer-section {
+  float: right;
+  position: relative;
+  right: 0;
+}
+.social-links-container li {
+  display: inline-block;
+}
+
+.social-links-container li + li {
+  margin-left: 15px;
+}
+
+.social-links-container img {
+  width: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--clr-font-secondary);
+}
+
+.footer-link-section {
+  margin-top: 1.25rem;
+}
+
+.footer-link-section h4 {
+  color: var(--clr-font-accent-dark);
+}
+
+.footer-link-section a {
+  display: inline-block;
+  margin-top: 0.3125rem;
+}
+
+.footer-link-section a + a {
+  margin-left: 1.875rem;
+}
+
+/* address section */
+
+.right-footer-section h4 {
+  line-height: 1.25;
+}
+
+address {
+  margin-top: 0.625rem;
+  line-height: 1.35;
+}
+
+address a:first-of-type {
+  font-weight: 400;
+}
+
+/* bottom copyright */
+
+.footer-copyright-section {
+  margin-top: 30px;
+  border-top: 1px solid var(--clr-font-secondary);
+}
+
+small {
+  display: inline-block;
+  padding-top: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.footer-copyright-section span {
+  margin-top: 10px;
+  float: right;
+}
+
+.footer-copyright-section img {
+  width: 40px;
 }

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@200;400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -29,8 +29,12 @@
         <ul>
           <li><a href="#">Classes</a></li>
           <li><a href="#">Hire Us</a></li>
-          <li><a href="#">logo</a></li>
-          <li><a href="#">Donate</a></li>
+          <li class="header-logo">
+            <a href="#">
+              <img src="./asset/lg_logo_white.png" alt="level ground logo" />
+            </a>
+          </li>
+          <li><a class="btn-donate" href="#">Donate</a></li>
         </ul>
       </nav>
     </header>
@@ -43,10 +47,10 @@
           mat' in the pursuit of their ambitions through out Student Trainer
           Certification and College Access programs.
         </p>
-        <p>Watch the Video</p>
+        <p class="demo-video">Watch the Video</p>
         <span>Big Background Image</span>
       </header>
-      <section>
+      <section class="why-section std-section">
         <h2>Why</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
@@ -55,19 +59,20 @@
           officia distinctio odit!
         </p>
       </section>
-      <section>
-        <section>
+      <!-- visit section -->
+      <section class="visit-section clearfix">
+        <section class="half-section">
           <div></div>
           <h3>Visit the Gym</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur amet quis, nesciunt cum labore, laudantium ipsam rem
-            laboriosam corporis nam doloremque voluptates magni sapiente!
-            Officiis ipsum nemo cupiditate a officia!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa
+            necessitatibus, omnis molestias velit et recusandae ex voluptatem
+            quae ducimus, architecto saepe iure ad cumque ut error distinctio.
+            Porro, blanditiis!
           </p>
-          <a href="#">See Classes</a>
+          <a href="#" class="btn">See Classes</a>
         </section>
-        <section>
+        <section class="half-section">
           <div></div>
           <h3>Have Us Visit You</h3>
           <p>
@@ -76,10 +81,10 @@
             quae ducimus, architecto saepe iure ad cumque ut error distinctio.
             Porro, blanditiis!
           </p>
-          <a href="#">Hire us</a>
+          <a href="#" class="btn">Hire us</a>
         </section>
       </section>
-      <section>
+      <section class="std-section">
         <h2>Volunteer with Level Ground</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis cumque
@@ -87,35 +92,54 @@
           eius vitae iusto accusantium nam consectetur fuga fugiat dignissimos
           id ratione!
         </p>
-        <a href="#">Volunteer</a>
+        <a href="#" class="btn">Volunteer</a>
       </section>
       <footer>
-        <div>
-          <ul>
+        <div class="left-footer-section">
+          <ul class="social-links-container">
             <li>
-              <a href="#"><img src="" alt="" /></a>
+              <a href="#">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook--v1.png"
+                  alt="facebook link"
+                />
+              </a>
             </li>
             <li>
-              <a href="#"><img src="" alt="" /></a>
+              <a href="#">
+                <img
+                  src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png"
+                  alt="twitter link"
+                />
+              </a>
             </li>
             <li>
-              <a href="#"><img src="" alt="" /></a>
+              <a href="#">
+                <img
+                  src="https://img.icons8.com/material-rounded/24/ffffff/mail.png"
+                  alt="email link"
+                />
+              </a>
             </li>
           </ul>
-          <section>
+          <section class="footer-link-section">
             <h4>Site Map</h4>
             <a href="#">Classes</a>
             <a href="#">Hire Us</a>
           </section>
-          <section>
+          <section class="footer-link-section">
             <h4>Contribute</h4>
             <a href="#">Give</a>
             <a href="#">Volunteer</a>
           </section>
         </div>
 
-        <div>
-          <h4>Level Ground Mixed Martial Arts</h4>
+        <div class="right-footer-section">
+          <h4>
+            Level Ground
+            <br />
+            Mixed Martial Arts
+          </h4>
           <address>
             <span>50 Milk Street, Floor 17</span>
             <br />
@@ -127,12 +151,12 @@
           </address>
         </div>
 
-        <section>
+        <section class="footer-copyright-section">
           <small>
             Level Ground Mixed Martial Arts is a tax-exempt, 501(c)3
             organization under the IRS. EIN 46-3915852
           </small>
-          <span>logo</span>
+          <span><img src="./asset/lg_logo_white.png" alt="LG logo" /></span>
         </section>
       </footer>
     </main>
