@@ -1,42 +1,357 @@
 /* Box Model Hack */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  font-family: var(--ff);
+  color: var(--clr-font-primary);
+  margin: 0;
+  padding: 0;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
+*:root {
+  --clr-bg-primary: #f5f9fc;
+  --clr-bg-secondary: #fff;
+  --clr-bg-accent: #e1e9f0;
 
-body {
+  --clr-font-primary: #304659;
+  --clr-font-secondary: #7d94a8;
 
+  --clr-border-primary: #d5dee6;
+
+  --ff: 'Source Sans Pro', sans-serif;
 }
-
+/******************************************
+/* LAYOUT - mobile first
+/*******************************************/
 
 /******************************************
-/* LAYOUT
+/* global basic styles
 /*******************************************/
-header {
-
+a {
+  text-decoration: none;
 }
 
-footer {
+li {
+  list-style: none;
+}
 
+button {
+  background-color: unset;
+  border-color: unset;
+  border: unset;
+  text-align: unset;
+  align-items: unset;
 }
 
 /******************************************
-/* ADDITIONAL STYLES
+/* header
 /*******************************************/
+
+.nav-header {
+  padding: 0.625rem 0 1.25rem 1.25rem;
+  text-align: center;
+  background-color: var(--clr-bg-primary);
+  border-bottom: 0.0625rem solid var(--clr-border-primary);
+}
+
+nav ul,
+.top-button {
+  display: none;
+}
+
+/* hamburger menu */
+
+.nav-menu-btn {
+  margin-top: 0.625rem;
+  float: left;
+  width: 1.5625rem;
+  background-color: var(--clr-bg-primary);
+  cursor: pointer;
+}
+
+.nav-menu-btn span {
+  display: block;
+  background-color: var(--clr-font-primary);
+  width: 100%;
+  height: 0.125rem;
+  border-radius: 50%;
+}
+
+.nav-menu-btn span + span {
+  margin-top: 0.3125rem;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/******************************************
+/* main > header/ hero section
+/*******************************************/
+
+.top-header {
+  padding: 2.5rem 1.25rem 0 1.25rem;
+  background-color: var(--clr-bg-primary);
+}
+
+.top-header span {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+  color: var(--clr-font-secondary);
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  width: 15ch;
+}
+
+form {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+form label {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 0;
+}
+
+form input {
+  display: block;
+  padding-left: 0.625rem;
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--clr-bg-accent);
+  color: var(--clr-font-secondary);
+  border: unset;
+}
+
+form button {
+  margin-top: 0.9375rem;
+  padding: 0.625rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--clr-font-primary);
+  color: var(--clr-bg-primary);
+  width: 100%;
+}
+
+.top-header p {
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.top-header img {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+/******************************************
+/* main > feature section
+/*******************************************/
+
+.feature-section {
+  padding: 0 0.75rem;
+  padding-bottom: 2.5rem;
+  padding-top: 3.125rem;
+  background-color: var(--clr-bg-primary);
+}
+
+.feature {
+  text-align: center;
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.3125rem;
+  border: 0.125rem solid var(--clr-bg-accent);
+  border-radius: 0.5rem;
+}
+
+.feature img {
+  width: 3.125rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.feature p {
+  margin: 0 auto;
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  width: 20ch;
+}
+
+.feature a {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.9375rem;
+  font-weight: 700;
+}
+
+.feature a::after {
+  --box-size: 0.5rem;
+  position: absolute;
+  top: calc(100% / 2 - (var(--box-size) / 2));
+  right: -0.625rem;
+  content: '';
+  /* background-color: var(--clr-font-primary); */
+  width: var(--box-size);
+  height: var(--box-size);
+  border-top: 0.0938rem solid var(--clr-font-primary);
+  border-right: 0.0938rem solid var(--clr-font-primary);
+  transform: rotate(45deg);
+}
+
+/******************************************
+/* main > collect section
+/*******************************************/
+
+.collect-section {
+  margin-top: 2.5rem;
+  padding: 0 1.25rem;
+}
+
+.collect-section h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.collect-section p {
+  margin-top: 1.25rem;
+  color: var(--clr-font-secondary);
+}
+
+.collect-section div {
+  margin-top: 1.25rem;
+  height: 1.875rem;
+  background-color: var(--clr-bg-accent);
+}
+
+/* desktop media query */
+
+@media screen and (min-width: 62.5em) {
+  /******************************************
+/* header
+/*******************************************/
+
+  .nav-header {
+    padding: 1.25rem 3.75rem 0 3.125rem;
+    text-align: unset;
+    border: unset;
+  }
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .logo {
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+  }
+
+  nav {
+    position: relative;
+    height: 100%;
+    text-align: center;
+  }
+
+  nav ul {
+    display: inline-block;
+  }
+
+  ul li {
+    display: inline-block;
+  }
+
+  ul li a {
+    padding: 0 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  ul li a:hover {
+    background-color: var(--clr-bg-accent);
+  }
+
+  .top-button {
+    position: absolute;
+    right: 0;
+    display: unset;
+    padding: 0.625rem 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: var(--clr-font-primary);
+    color: var(--clr-bg-primary);
+  }
+
+  /******************************************
+  /* main > header/ hero section
+  /*******************************************/
+
+  .top-header {
+    position: relative;
+    padding-top: 9.375rem;
+    padding-left: 11.25rem;
+    /* required because heading nav height shrunk */
+    /* stopped here, header is bugged cuz absolute elements shrunk container */
+    /* z-index: -1; */
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  form {
+    margin-top: 1.875rem;
+  }
+
+  form input {
+    display: inline-block;
+    width: 30rem;
+  }
+
+  form button {
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    width: unset;
+  }
+
+  .top-header p {
+    width: 40ch;
+  }
+
+  .top-header img {
+    position: absolute;
+    margin: unset;
+    width: 50%;
+    /* z-index: 2; */
+  }
+}

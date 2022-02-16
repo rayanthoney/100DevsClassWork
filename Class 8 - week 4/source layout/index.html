@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -23,29 +23,34 @@
     <script defer type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <header>
+    <header class="nav-header">
       <nav>
+        <button class="nav-menu-btn" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <a class="logo" href="#">Source</a>
         <ul>
           <li><a href="#">First link</a></li>
           <li><a href="#">Second link</a></li>
           <li><a href="#">Third link</a></li>
           <li><a href="#">Fourth link</a></li>
-          <li class="btn"><a href="#">Button</a></li>
         </ul>
+        <a class="top-button" href="#">Button</a>
       </nav>
     </header>
     <main>
-      <header>
+      <header class="top-header">
         <span>Tagline</span>
         <h1>Source helps creators do more of what they love</h1>
-        <form action="">
+        <form action="get">
           <label for="placeholder">placeholder</label>
           <input
             type="text"
             name="placeholder"
             id="placeholder"
-            placeholder="placeholder"
+            placeholder="Placeholder"
           />
           <button>Button</button>
         </form>
@@ -57,7 +62,7 @@
       </header>
 
       <!-- feature section -->
-      <section>
+      <section class="feature-section">
         <!-- feature one -->
         <section class="feature">
           <div><img src="./assest/blur_circular_black_24dp.svg" alt="" /></div>
@@ -100,7 +105,7 @@
         </section>
       </section>
       <!-- collecting info section -->
-      <section>
+      <section class="collect-section">
         <h2>Collecting information about the problem</h2>
         <p>
           In the context of information architecture, information is separate
