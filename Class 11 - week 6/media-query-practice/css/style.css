@@ -5,34 +5,34 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
-
 /******************************************
 /* LAYOUT
 /*******************************************/
 
-main section, .bottom section{
+main section,
+.bottom section {
   width: 33.3333%;
   height: 300px;
   border: 1px solid black;
   float: left;
 }
-.bottom section{
+.bottom section {
   width: 50%;
 }
 
@@ -41,9 +41,35 @@ main section, .bottom section{
 /*******************************************/
 
 /* On mobile, please make all sections stack  */
+@media screen and (max-width: 25rem) {
+  main section,
+  .bottom section {
+    width: 100%;
+    float: unset;
+  }
+}
 
 /* On tablet, please make the sections in main stack  */
 
+@media screen and (min-width: 25rem) and (max-width: 50rem) {
+  main section {
+    float: unset;
+    width: 100%;
+  }
+}
+
 /* On laptop, please keep the normal layout, but everything should be light green */
 
+@media screen and (min-width: 50rem) and (max-width: 62.5rem) {
+  * {
+    background-color: lightgreen;
+  }
+}
+
 /* On larger screens, please keep the normal layout, but everything should be light blue */
+
+@media screen and (min-width: 62.5rem) and (max-width: 78.125rem) {
+  * {
+    background-color: lightblue;
+  }
+}
