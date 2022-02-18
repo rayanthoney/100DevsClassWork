@@ -1,41 +1,43 @@
 /* Box Model Hack */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
-body {
-
+*:root {
+  /* Yeseva One = headings */
+  /* Roboto = minor headings */
+  /* paragraphs - Lato maybe? */
+  /* 
+  font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Yeseva One', cursive;
+  
+  
+  */
 }
-
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
-}
-
-footer {
-
-}
 
 /******************************************
 /* ADDITIONAL STYLES
