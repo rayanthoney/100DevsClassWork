@@ -1,6 +1,6 @@
-document.querySelector('#finalRose').addEventListener('click', hide);
+// 3 adjectives
+// a pick between options, hide other options
+// a pick who is next
+// a pick who won
 
-function hide() {
-  document.querySelector('#claire').style.display = 'none';
-  document.querySelector('#sharleen').style.display = 'none';
-}
+'';
