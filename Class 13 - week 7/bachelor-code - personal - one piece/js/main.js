@@ -96,6 +96,12 @@ function randomPick(max) {
   return Math.floor(Math.random() * max);
 }
 
+function elementRemover(parentEl, pirateClass) {
+  Array.from(parentEl.childNodes).forEach((curEl) => {
+    if (!curEl.classList.contains(pirateClass)) curEl.remove();
+  });
+}
+
 //  start choices
 document.querySelector('.btn').addEventListener('click', (e) => {
   e.target.classList.add('hidden');
@@ -121,5 +127,6 @@ document.querySelector('body').addEventListener('click', (e) => {
   if (!e.target.classList.contains('pirate')) return;
 
   const clickedElPirateTypeClass = e.target.classList.value.split(' ').pop();
-  console.log(clickedElPirateTypeClass);
+
+  elementRemover(pirateContainerEL, clickedElPirateTypeClass);
 });
