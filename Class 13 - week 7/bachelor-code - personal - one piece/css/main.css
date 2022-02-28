@@ -1,1 +1,282 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/******************************************
+/* BASIC STYLING
+/*******************************************/
+
+*:root {
+  /* color set up */
+  --clr-bg-bookColors: #3dbbff;
+
+  --clr-bg-primary: var(--clr-bg-bookColors);
+
+  --fade-to-black: linear-gradient(
+    to bottom,
+    transparent 55%,
+    rgba(0, 0, 0, 0.65)
+  );
+}
+
+/* font-family: 'Playball', cursive;
+font-family: 'Sacramento', cursive; 
+font-family: 'Roboto', sans-serif;*/
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--clr-bg-primary);
+  background-color: #000;
+  font-family: 'Sacramento', cursive;
+}
+
+h1 {
+  color: var(--clr-bg-primary);
+  font-size: 96px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+button {
+  background-color: unset;
+  border: unset;
+}
+
+.btn {
+  position: relative;
+  padding: 20px;
+  align-self: center;
+  display: inline-block;
+  background-color: var(--clr-bg-primary);
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  width: 20%;
+  border-radius: 10px;
+  cursor: pointer;
+  /* box-shadow: 0 5px 3px rgba(255, 255, 255, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.8); */
+  box-shadow: 0 8px 3px rgba(61, 187, 255, 0.7),
+    0 0 0 1px rgba(61, 187, 255, 0.8);
+  transition: all 0.2s;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: yellow;
+  background-color: var(--clr-bg-primary);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  animation: pulse 2s ease-in-out 0s infinite forwards;
+}
+
+.btn:active {
+  box-shadow: 5px 5px 5px 0px inset;
+}
+
+/* button animation */
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: blur(10px);
+  }
+  50% {
+    filter: blur(30px);
+  }
+}
+
+/* end animation */
+
+.pirate-container {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pirate {
+  padding-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* box-shadow: 1px 1px 20px 5px #000; */
+  background-color: orange;
+  border-radius: 30px;
+  width: 25%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.pirate h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 36px;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+/******************************************
+/* pirate classes
+/*******************************************/
+
+.straw-hats {
+  background-image: var(--fade-to-black), url('../imgs/straw-hats-flag.png');
+}
+.kid-pirates {
+  background-image: var(--fade-to-black), url('../imgs/kid-pirates-flag.png');
+}
+.firetank-pirates {
+  background-image: var(--fade-to-black),
+    url('../imgs/firetank-pirates-flag.png');
+}
+.heart-pirates {
+  background-image: var(--fade-to-black), url('../imgs/heart-pirates-flag.png');
+}
+.barto-club {
+  background-image: var(--fade-to-black), url('../imgs/barto-club-flag.png');
+}
+.hawkins-pirates {
+  background-image: var(--fade-to-black),
+    url('../imgs/hawkins-pirates-flag.png');
+}
+.beautiful-pirates {
+  background-image: var(--fade-to-black),
+    url('../imgs/beautiful-pirates-flag.png');
+}
+.bonney-pirates {
+  background-image: var(--fade-to-black), url('../imgs/bonney-pirates-flag.png');
+}
+.caribou-pirates {
+  background-image: var(--fade-to-black),
+    url('../imgs/caribou-pirates-flag.png');
+}
+.fallen-monk-pirates {
+  background-image: var(--fade-to-black),
+    url('../imgs/fallen-monk-pirates-flag.png');
+}
+.spade-pirates {
+  background-image: var(--fade-to-black), url('../imgs/spade-pirates-flag.png');
+}
+.drake-pirates {
+  background-image: var(--fade-to-black), url('../imgs/drake-pirates-flag.png');
+}
+
+/******************************************
+/* STYLING tricks
+/*******************************************/
+
+.shadow {
+  position: relative;
+}
+
+.shadow::before,
+.shadow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-image: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 30px;
+  z-index: -1;
+  animation: chroma 20s linear infinite;
+}
+
+.shadow::after {
+  filter: blur(30px);
+}
+
+@keyframes chroma {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+}
+
+/* curtain */
+
+.curtain {
+  position: relative;
+  overflow: hidden;
+  /* height: calc(100% + 20px); */
+}
+
+.curtain::before,
+.curtain::after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  z-index: 3;
+}
+
+.curtain::before {
+  top: 0;
+  left: 0;
+  animation: open-left 1s linear 0.5s 1 forwards;
+}
+
+.curtain::after {
+  top: 0;
+  right: 0;
+  animation: open-right 1s linear 0.5s 1 forwards;
+}
+
+@keyframes open-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes open-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
