@@ -103,6 +103,21 @@ button {
 
 /* end animation */
 
+/* reset btn */
+
+.reset-btn {
+  animation: 2s linear 0.5s 1 both appear;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .pirate-container {
   padding: 60px 0;
   display: flex;

@@ -79,17 +79,23 @@ function createPirateElement(pirate) {
   return pirateEL;
 }
 
-/*
+function createResetButton() {
+  // setup btn
+  const resetBtn = document.createElement('button');
+  resetBtn.classList.add('btn', 'reset-btn');
 
-    <section class="pirate-container">
-      <section class="pirate straw-hats shadow" id="pirate-1">
-        <h2>Straw Hats</h2>
-      </section>
-      <section class="pirate shadow" id="pirate-2">zoro</section>
-      <section class="pirate shadow" id="pirate-3">guy</section>
-    </section>
+  // setup reset icon
+  const resetBtnInnerImg = document.createElement('img');
+  resetBtnInnerImg.setAttribute(
+    'src',
+    'https://img.icons8.com/ios-filled/50/000000/recurring-appointment.png'
+  );
 
-*/
+  // fill btn
+  resetBtn.appendChild(resetBtnInnerImg);
+
+  document.querySelector('body').appendChild(resetBtn);
+}
 
 // random function
 function randomPick(max) {
@@ -102,7 +108,13 @@ function elementRemover(parentEl, pirateClass) {
   });
 }
 
-//  start choices
+function resetEverything() {
+  pirateContainerEL.remove();
+}
+
+/******************************************
+/* start choices
+/*******************************************/
 document.querySelector('.btn').addEventListener('click', (e) => {
   e.target.classList.add('hidden');
 
@@ -129,4 +141,18 @@ document.querySelector('body').addEventListener('click', (e) => {
   const clickedElPirateTypeClass = e.target.classList.value.split(' ').pop();
 
   elementRemover(pirateContainerEL, clickedElPirateTypeClass);
+  createResetButton();
+});
+
+//reset button remove elements
+document.querySelector('body').addEventListener('click', (e) => {
+  if (
+    e.target.classList.contains('reset-btn') ||
+    e.target.parentElement.classList.contains('reset-btn')
+  ) {
+    document.querySelectorAll('.pirate').forEach((el) => el.remove());
+    document.querySelector('.pirate-container').remove();
+    document.querySelector('.hidden').classList.remove('hidden');
+    document.querySelector('.reset-btn').remove();
+  }
 });
