@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+img {
+  height: 20.63rem;
+  width: 20.63rem;
+  transition: all 0.8s;
+  background-color: rgba(255, 253, 253, 0.594);
+}
+body {
+  background-image: url("https://img.huffingtonpost.com/asset/5b9d0f1a2200003000d97aa2.png?ops=scalefit_630_400_noupscale&format=webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+}
+
+header h1 {
+  font-size: 8rem;
+  font-family: Tahoma,Verdana,Segoe,sans-serif; 
+  font-weight: 700;
+}
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 80%;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+img:hover {
+  background-color: rgb(253, 251, 183);
+  cursor: pointer;
+}
+
+footer {
+  font-size: 3rem;
+}
+
