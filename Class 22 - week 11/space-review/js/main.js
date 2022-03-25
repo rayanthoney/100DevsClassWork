@@ -1,6 +1,9 @@
 //Arrays
 
 //Create and array of numbers. Sum all of the numbers. Alert the sum.
+const numArr = [1, 8, 5, 89, 78, 1, 6];
+const sum = numArr.reduce((total, num) => (total += num));
+console.log(sum);
 
 //Create a function that takes in an array of numbers
 //Return a new array of numbers that is every original number squared
