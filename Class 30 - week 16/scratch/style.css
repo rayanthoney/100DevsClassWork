@@ -1,0 +1,62 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  display: flex;
+  flex-basis: 50%;
+  flex-flow: row wrap;
+  height: 50vh;
+  /*border: 1px solid red;*/
+}
+.row {
+  display: flex;
+  flex-basis: 100%;
+}
+.box {
+  flex-basis: 33.333%;
+  /*border: 1px solid blue;*/
+}
+.box:hover {
+  background-color: blue;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.column1 {
+  border-right: 1px solid black;
+}
+
+.column3 {
+  border-left: 1px solid black;
+}
+
+.row1 {
+  border-bottom: 1px solid black;
+}
+
+.row3 {
+  border-top: 1px solid black;
+}
