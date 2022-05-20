@@ -14,11 +14,23 @@
 
 // order: L1, L4, L3, L2
 
-const promise = fetch('https://jsonplaceholder.typicode.com/todos/1');
+// const promise = fetch('https://jsonplaceholder.typicode.com/todos/1');
 
-promise
-  .then((res) => res.json())
-  .then((user) => console.log('😀', user.title))
-  .catch((err) => console.error('😭', err));
+// promise
+//   .then((res) => res.json())
+//   .then((user) => console.log('😀', user.title))
+//   .catch((err) => console.error('😭', err));
 
-console.log('🥪 Synchronous');
+// console.log('🥪 Synchronous');
+
+// async function getData() {
+//   const data = await Promise.resolve('test');
+//   console.log(data);
+//   return Promise.resolve(data);
+// }
+
+// async function showResult(func) {
+//   console.log(await func());
+// }
+
+// showResult(getData);

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript info | Event loop: microtasks and macrotasks</title>
+    <script defer src="./event-loop-script.js"></script>
+  </head>
+  <body>
+    <h1>test stuff</h1>
+    <button onclick="console.log('clicked')">click me</button>
+    <!-- <div id="progress"></div>
+
+    <script>
+      // example 1: blocking event look till done, no render happens
+      function count() {
+        for (let i = 0; i < 1e6; i++) {
+          i++;
+          //id = progress
+          progress.innerHTML = i;
+        }
+      }
+
+      count();
+    </script> -->
+
+    <!-- <div id="progress"></div>
+
+    <script>
+      // example 2: shows every time
+      let i = 0;
+      let start = Date.now();
+      function count() {
+        // do a piece of the heavy job (*)
+        do {
+          i++;
+          progress.innerHTML = i;
+        } while (i % 1e3 != 0);
+
+        if (i < 1e7) {
+          setTimeout(count);
+        } else {
+          console.log('Done in ' + (Date.now() - start) + 'ms');
+        }
+      }
+
+      count();
+    </script> -->
+    <!-- 
+    <div id="progress"></div>
+
+    <script>
+      // example with queueMicrotask
+      let i = 0;
+// this is still blocking but blocks in microqueue vs setTimeout isn't
+// queueMicrotask ensures this renders at the very end, updating HTML once
+// but that is only because the microtask queue runs until completed
+      function count() {
+        // do a piece of the heavy job (*)
+        do {
+          i++;
+        } while (i % 1e3 != 0);
+        progress.innerHTML = i;
+
+        if (i < 1e6) {
+          queueMicrotask(count);
+          // setTimeout(count);
+        }
+      }
+
+      count();
+    </script> -->
+  </body>
+</html>

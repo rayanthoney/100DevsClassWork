@@ -13,34 +13,54 @@
 // houseThree()
 
 //Code 02
-// function houseOne(){
-//     console.log('Paper delivered to house 1')
+// function houseOne() {
+//   console.log('Paper delivered to house 1');
 // }
-// function houseTwo(){
-//     setTimeout(() => console.log('Paper delivered to house 2'), 3000)
+// function houseTwo() {
+//   setTimeout(() => console.log('Paper delivered to house 2'), -1000);
 // }
-// function houseThree(){
-//     console.log('Paper delivered to house 3')
+// function houseThree() {
+//   console.log('Paper delivered to house 3');
 // }
-// houseOne()
-// houseTwo()
-// houseThree()
+// houseOne();
+// houseTwo();
+// houseThree();
 
-//Code 03
-// function houseOne(){
-//     console.log('Paper delivered to house 1')
+// random example
+// function sayNameSetup(n) {
+//   return () => `Hello ${n}`;
 // }
-// function houseTwo(callback){
-//     setTimeout(() => {
-//         console.log('Paper delivered to house 2')
-//         callback()
-//     }, 3000)
+
+// function nameFunc(name, randomColor) {
+//   return `${name} with ${randomColor}`;
 // }
-// function houseThree(){
-//     console.log('Paper delivered to house 3')
+
+// let test = sayNameSetup(nameFunc('guy', 'blue'));
+// console.log(test());
+
+// Code 03
+// function houseOne() {
+//   console.log('Paper delivered to house 1');
 // }
-// houseOne()
-// houseTwo(houseThree)
+// function houseTwo(callback) {
+//   setTimeout(() => {
+//     console.log('Paper delivered to house 2');
+//     callback();
+//   }, 3000);
+// }
+// function houseThree() {
+//   console.log('Paper delivered to house 3');
+// }
+// houseOne();
+// houseTwo(houseThree);
+
+// random example callback bind example
+function clickImg(msg) {
+  console.log(`you click the img, here is the msg: ${msg}`);
+}
+document
+  .querySelector('img')
+  .addEventListener('click', clickImg.bind(this, 'the color blue'));
 
 //Code 04
 // function houseOne(){
@@ -101,44 +121,52 @@
 //     .catch(err => console.log(err))
 
 //Code 07
-// function houseOne(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 1')
-//         }, 1000)
-//     })
-// }
-// function houseTwo(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 2')
-//         }, 5000)
-//     })
-// }
-// function houseThree(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 3')
-//         }, 2000)
-//     })
-// }
+function houseOne() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Paper delivered to house 1');
+    }, 1000);
+  });
+}
+function houseTwo() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Paper delivered to house 2');
+    }, 5000);
+  });
+}
+function houseThree() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Paper delivered to house 3');
+    }, 2000);
+  });
+}
 
-// async function getPaid(){
-//     const houseOneWait = await houseOne()
-//     const houseTwoWait = await houseTwo()
-//     const houseThreeWait = await houseThree()
-//     console.log(houseOneWait)
-//     console.log(houseTwoWait)
-//     console.log(houseThreeWait)
-// }
+async function getPaid() {
+  let [houseOneWait, houseTwoWait, houseThreeWait] = await Promise.all([
+    houseOne(),
+    houseTwo(),
+    houseThree(),
+  ]);
+  // const houseOneWait = await houseOne();
+  // const houseTwoWait = await houseTwo();
+  // const houseThreeWait = await houseThree();
+  console.log(houseOneWait);
+  console.log(houseTwoWait);
+  console.log(houseThreeWait);
+}
 
-// getPaid()
+getPaid();
 
 //Code 08
-// async function getACuteDogPhoto(){
-//     const res = await fetch('https://dog.ceo/api/breeds/image/random')
-//     const data = await res.json()
-//     console.log(data)
-// }
-// getACuteDogPhoto()
-
+async function getACuteDogPhoto() {
+  try {
+    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+    const data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
+getACuteDogPhoto();
