@@ -34,3 +34,28 @@
 // }
 
 // showResult(getData);
+
+async function getFruit(fruit) {
+  fruitObj = {
+    pineapple: '🍍',
+    peach: '🍑',
+    strawberry: '🍓',
+  };
+
+  return fruitObj[fruit];
+}
+
+const fruits = ['peach', 'pineapple', 'strawberry'];
+const smoothie = fruits.map((v) => getFruit(v));
+
+const fruitLoop = async () => {
+  // ----------here-----------
+  for await (const emoji of smoothie) {
+    console.log(emoji);
+  }
+};
+
+fruitLoop();
+// 🍑
+// 🍍
+// 🍓
