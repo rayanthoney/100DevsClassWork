@@ -1,3 +1,5 @@
 *.epub
 *.DS_store
 *secrets/
+
+*node_modules/
