@@ -24,6 +24,8 @@ let rappers = {
 };
 
 // middleware
+// for cors support on local
+app.use(cors());
 // handles all normal js/css/img/etc files
 app.use(express.static(__dirname + '/public'));
 // use qs lib for url query string
