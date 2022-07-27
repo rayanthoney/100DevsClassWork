@@ -3,3 +3,6 @@
 *secrets/
 
 *node_modules/
+
+.env
+server-user-info.txt
